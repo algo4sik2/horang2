@@ -290,3 +290,4 @@ cython_debug/
 
 prac/
 prac
+.vscode
