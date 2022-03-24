@@ -9,7 +9,7 @@ class Node:
         
 class Solution:
     # 재귀 구조로 연결 (책)
-    def mergetwolists(self, l1, l2): # 로컬에서 돌아가게 하려면 어떡해야하지?
+    def mergetwolists(self, l1, l2): 
         # 작은 값이 왼쪽에 오게함
         if (not l1) or (l2 and l1.val > l2.val):
             l1, l2 = l2, l1
