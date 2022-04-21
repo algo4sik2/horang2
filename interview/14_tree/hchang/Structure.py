@@ -8,7 +8,7 @@ class TreeNode:
             nextnode = deque([self.add_left, self.add_right])
             for i in data[1:]:
                 addnode = nextnode.popleft()
-                node = addnode(i)
+                if i is not None:node = addnode(i)
                 nextnode.extend([node.add_left, node.add_right])
         else: self.val = data
 
@@ -20,6 +20,9 @@ class TreeNode:
             if node:
                 result.append(node.val)
                 q.extend([node.left,node.right])
+            else: result.append(None)
+        while result[-1] is None:
+            result.pop()
         return result
 
     def add_left(self,data):
@@ -33,6 +36,11 @@ class TreeNode:
     def print_all(self):
         count = 0
         nodelist = self.to_list()
-        while 2**count < len(nodelist):
-            print(*nodelist[2**count-1:2**(count+1)-1])
+        while 2**count < len(nodelist)+1:
+            print(' '*(30//(count+1)),end='')
+            if count:
+                for i in nodelist[2**count-1:2**(count+1)-1]:
+                    print(i, end=' '*(30//(2**count-1)+5-len(str(i))))
+                print()
+            else: print(*nodelist[2**count-1:2**(count+1)-1])
             count+=1
