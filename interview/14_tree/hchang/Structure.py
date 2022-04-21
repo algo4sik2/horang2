@@ -33,14 +33,13 @@ class TreeNode:
         self.right = TreeNode(data)
         return self.right
 
-    def print_all(self):
+    def print_all(self,num=30):
         count = 0
         nodelist = self.to_list()
         while 2**count < len(nodelist)+1:
-            print(' '*(30//(count+1)),end='')
             if count:
                 for i in nodelist[2**count-1:2**(count+1)-1]:
-                    print(i, end=' '*(30//(2**count-1)+5-len(str(i))))
+                    print(' '*(num//(2**count+1)-len(str(i))),i, end='')
                 print()
-            else: print(*nodelist[2**count-1:2**(count+1)-1])
+            else: print(' '*(num//2),nodelist[0])
             count+=1
