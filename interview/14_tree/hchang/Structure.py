@@ -34,7 +34,7 @@ class TreeNode:
         self.right = TreeNode(data)
         return self.right
 
-    def print_all(self,num=30):
+    def print_all(self,num=60):
         self.addNoneNode()
         count = 0
         nodelist = self.to_list()
