@@ -21,5 +21,5 @@ def merge(t1, t2):
         return t1 or t2 
 
 a.print_all(num=50)
-b.print_all()
-merge(a,b).print_all()
+print(b)
+print(merge(a,b))

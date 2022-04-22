@@ -12,6 +12,9 @@ class TreeNode:
                 nextnode.extend([node.add_left, node.add_right])
             self.cutNoneNode()
         else: self.val = data
+    def __repr__(self):
+        self.print_all()
+        return ''
 
     def to_list(self):
         result = [self.val]
