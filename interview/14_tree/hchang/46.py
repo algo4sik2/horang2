@@ -4,11 +4,11 @@ a = TreeNode([1,3,2,5,3,4,4,3,2,4,2,2])
 #      1 
 #   3    2
 # 5
-b = TreeNode([2,1,3,null,4,null,7])
+b = TreeNode([2,null,3,null,null,null,7])
 
 #         2
-#    1         3
-#       4          7
+#             3
+#                7
 
 def merge(t1, t2):
     if t1 and t2:
@@ -20,6 +20,6 @@ def merge(t1, t2):
     else:
         return t1 or t2 
 
-a.print_all()
+a.print_all(num=50)
 b.print_all()
 merge(a,b).print_all()

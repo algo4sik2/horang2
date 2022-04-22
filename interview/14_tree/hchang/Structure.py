@@ -8,8 +8,9 @@ class TreeNode:
             nextnode = deque([self.add_left, self.add_right])
             for i in data[1:]:
                 addnode = nextnode.popleft()
-                if i is not None:node = addnode(i)
+                node = addnode(i)
                 nextnode.extend([node.add_left, node.add_right])
+            self.cutNoneNode()
         else: self.val = data
 
     def to_list(self):
@@ -34,12 +35,31 @@ class TreeNode:
         return self.right
 
     def print_all(self,num=30):
+        self.addNoneNode()
         count = 0
         nodelist = self.to_list()
         while 2**count < len(nodelist)+1:
             if count:
                 for i in nodelist[2**count-1:2**(count+1)-1]:
+                    if i is None: i = ''
                     print(' '*(num//(2**count+1)-len(str(i))),i, end='')
                 print()
             else: print(' '*(num//2),nodelist[0])
             count+=1
+        self.cutNoneNode()
+
+    def cutNoneNode(self):
+        node = self
+        if node.left:
+            if node.left.val is None: node.left = None
+            else: node.left.cutNoneNode()
+        if node.right:
+            if node.right.val is None: node.right = None
+            else: node.right.cutNoneNode()
+
+    def addNoneNode(self):
+        if self.left or self.right:
+            if not self.left: self.left = TreeNode(None)
+            if not self.right: self.right = TreeNode(None)
+            self.left.addNoneNode()
+            self.right.addNoneNode()
