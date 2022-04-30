@@ -7,8 +7,9 @@ def hi():
     return dedic
 
 trie = hi()
+# imtrie를 만들어서 거꾸로 된 trie도 만든다.
 imtrie = hi()
-# 일단 다 집어 넣는다.
+# 일단 다 집어 넣는다. 딕셔너리로 trie처럼 생각하고 그냥 한다.
 for index, word in enumerate(words):
     node = trie
     imnode = imtrie
@@ -42,6 +43,8 @@ for i, word in enumerate(words):
             break
     # 거꾸로 넣는 문자에 남은게 없으면 노드의 남은 부분을 살핀다. 
     # if not remain: 를 아래와 같이 변형한다. imnode 추가
+    # imtrie, imnode를 만들었으니, 똑바로 된 단어도 집어넣으면서, 파악이 가능하다.
+    # 이것의 장점은 trie가 남았을 경우를 신경쓰지 않아도 된다는 것이다.
 
     for j, char in enumerate(word):
         imremain = word[j+1:]
