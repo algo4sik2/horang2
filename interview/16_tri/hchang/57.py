@@ -1,5 +1,6 @@
 from pprint import pprint
-words = ['d','cbbcd','dcbb','dcbc','cbbc','bbcd']
+# words = ['d','cbbcd','dcbb','dcbc','cbbc','bbcd']
+words = ['abcd','dcba','lls','s','sssll','']
 
 def hi():
     dedic = {'end':False}
@@ -14,7 +15,7 @@ for index, word in enumerate(words):
     for i, char in enumerate(word):
         if char not in node:
             node[char]=hi()
-        if imchar:=word[len(word)-1-i] not in imnode:
+        if (imchar:=word[len(word)-1-i]) not in imnode:
             imnode[imchar]=hi()
         node = node[char]
         imnode = imnode[imchar]
@@ -23,7 +24,7 @@ for index, word in enumerate(words):
     imnode['end']=True
     imnode['index']=index
 
-answerindex = []
+answerindex = set()
 
 # 문자를 거꾸로 돌려서 다 넣고 남은 부분이 펠린드롬인 것을 찾는다.
 for i, word in enumerate(words):
@@ -32,25 +33,35 @@ for i, word in enumerate(words):
     remain = ''
     imremain = ''
     for j, char in enumerate(imword:=word[::-1]):
+        remain = imword[j+1:]
         if char in node:
             node = node[char]
+            if node['end'] and remain==remain[::-1] and node['index']!=i:
+                answerindex.add((node['index'],i))
         else:
-            remain = imword[j:]
-            if node['end'] and remain==remain[::-1]:
-                answerindex.append[(node['index'],i)]
             break
-    #거꾸로 넣는 문자에 남은게 없으면 노드의 남은 부분을 살핀다. 
+    # 거꾸로 넣는 문자에 남은게 없으면 노드의 남은 부분을 살핀다. 
     # if not remain: 를 아래와 같이 변형한다. imnode 추가
+
     for j, char in enumerate(word):
+        imremain = word[j+1:]
         if char in imnode:
             imnode = imnode[char]
-        else:
-            imremain = word[j:]
-            if imnode['end'] and imremain==imremain[::-1]:
-                answerindex.append[(i,imnode['index'])]
+            if imnode['end'] and imremain==imremain[::-1] and i != imnode['index']:
+                answerindex.add((i,imnode['index']))
+        else: 
             break
+        
+    if word=='':
+        for j, word in enumerate(words):
+            if word==word[::-1] and i!=j:
+                answerindex.add((i,j))
+                answerindex.add((j,i))
+
 
 
 
 pprint(trie)
+print('\n\n')
+pprint(imtrie)
 print(answerindex)
