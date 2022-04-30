@@ -51,7 +51,7 @@ for i, word in enumerate(words):
                 answerindex.add((i,imnode['index']))
         else: 
             break
-        
+    # 문제에서 어이없게 빈 문자열을 줘서 예외처리를 해야한다. 하...
     if word=='':
         for j, word in enumerate(words):
             if word==word[::-1] and i!=j:
