@@ -35,7 +35,7 @@ for i, word in enumerate(words):
     imremain = ''
     for j, char in enumerate(imword:=word[::-1]):
         remain = imword[j+1:]
-        if char in node:
+        if char in node: 
             node = node[char]
             if node['end'] and remain==remain[::-1] and node['index']!=i:
                 answerindex.add((node['index'],i))
