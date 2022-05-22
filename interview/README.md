@@ -10,7 +10,7 @@
 * [13. 최단 경로 문제(Shortest Path, Dijkstra)](https://github.com/algo4sik2/horang2/tree/main/interview/13_dijkstra)
 * [14. 트리(Tree)](https://github.com/algo4sik2/horang2/tree/main/interview/14_tree)
 * [15. 힙(Heap)](https://github.com/algo4sik2/horang2/tree/main/interview/15_heap)
-* [16. 트라이(Try)](https://github.com/algo4sik2/horang2/tree/main/interview/16_tri)
+* [16. 트라이(Trie)](https://github.com/algo4sik2/horang2/tree/main/interview/16_tri)
 * [17. 정렬(Sort)](https://github.com/algo4sik2/horang2/tree/main/interview/17_sort)
 * [18. 이진 검색(Binary search)](https://github.com/algo4sik2/horang2/tree/main/interview/18_bianry_search)
 * [19. 비트 조작(Bit manipulate)](https://github.com/algo4sik2/horang2/tree/main/interview/19_bit_manipulate)
