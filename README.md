@@ -45,5 +45,16 @@
 
 
 ## 스터디원
-[김성연](https://github.com/yeonkkk), [김태균](https://github.com/cozytk), [안가영](https://github.com/ga0808), [조해창](https://github.com/SunCreation), [박진우](https://github.com/PJINU)
-, [이호진](https://github.com/ghwlsdl), [황예진](https://github.com/YejinHwang909)
+
+  
+<table>
+  <tr>
+     <td align="center"><a href="https://github.com/yeonkkk"><img src="https://avatars.githubusercontent.com/u/88660886?v=4?v=4?s=100" width="150px;" alt=""/><br /><sub><b>yeonkkk</b></sub></a><br /></td>
+    <td align="center"><a href="https://github.com/PJINU"><img src="https://avatars.githubusercontent.com/u/88822908?v=4?s=100" width="150px;" alt=""/><br /><sub><b>PJINU</b></sub></a><br /></td>
+    <td align="center"><a href="https://github.com/cozytk"><img src="https://avatars.githubusercontent.com/u/59143479?v=4?s=100" width="150px;" alt=""/><br /><sub><b>cozytk</b></sub></a><br /></td>
+    <td align="center"><a href="https://github.com/ga0808"><img src="https://avatars.githubusercontent.com/u/90363244?v=4?s=100" width="150px;" alt=""/><br /><sub><b>ga0808</b></sub></a><br /></td>
+    <td align="center"><a href="https://github.com/SunCreation"><img src="https://avatars.githubusercontent.com/u/89659423?v=4?s=100" width="150px;" alt=""/><br /><sub><b>SunCreation</b></sub></a><br /></td>
+    <td align="center"><a href="https://github.com/YejinHwang909"><img src="https://avatars.githubusercontent.com/u/70715543?v=4?s=100" width="150px;" alt=""/><br /><sub><b>YejinHwang909</b></sub></a><br /></td>
+    <td align="center"><a href="https://github.com/ghwlsdl"><img src="https://avatars.githubusercontent.com/u/90362869?v=4?s=100" width="150px;" alt=""/><br /><sub><b>ghwlsdl</b></sub></a><br /></td>
+</tr>
+</table>
